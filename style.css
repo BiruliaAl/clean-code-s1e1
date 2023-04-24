@@ -6,23 +6,23 @@ body {
   font-family: Lato, sans-serif;
 }
 
-.eisenhower_matrix {
+.eisenhower-matrix {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
 
-.eisenhower_matrix img {
+.eisenhower-matrix img {
   width: 100%;
 }
 
-.eisenhower_matrix .more_inf {
+.eisenhower-matrix .more_inf {
   font-family: fantasy, cursive;
 } 
 
 @media (max-width:768px) {
-.eisenhower_matrix { 
+.eisenhower-matrix { 
   text-align: center;
 }
 }
@@ -43,18 +43,18 @@ body {
   display: flex;
 }
 
-ul {
+.task__list {
   margin:0;
   padding: 0px;
 }
 
-li, 
-h3 {
+.task__items, 
+.task__subtittle {
   list-style:none;
 }
 
 input,
-button{
+button {
   outline:none;
 }
 
@@ -74,8 +74,8 @@ button:hover {
 
 /* Heading */
 
-h3,
-label[for="new-task"] {
+.task__subtittle,
+.add-task__label {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -104,7 +104,7 @@ input[type="text"]:focus {
 
 /* New Task */
 
-label[for="new-task"] {
+.add-task__label  {
   display: block;
   margin: 0 0 20px;
 }
@@ -122,9 +122,6 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-li > * {
   vertical-align: middle;
 }
 
@@ -143,19 +140,19 @@ li > input[type="text"] {
   width: 226px
 }
 
-button.btn_delete img {
+.btn_delete img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-button.btn_delete img:hover {
+.btn_delete img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
 
-ul#completed-task__list label {
+.completed-task__label {
   text-decoration: line-through;
   color: #888;
 }
@@ -163,14 +160,14 @@ ul#completed-task__list label {
 /* Edit Task */
 
 ul li input[type=text] {
-  display:none
+  display: none
 }
 
-ul li.task_edit-mode input[type=text] {
-  display:inline-block;
-  width:224px
+.task_edit-mode input[type=text] {
+  display: inline-block;
+  width: 224px
 }
 
-ul li.task_edit-mode label {
-  display:none;
+.task_edit-mode label {
+  display: none;
 }

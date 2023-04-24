@@ -25,7 +25,7 @@ body {
 .container {
   display: block;
   width: 500px;
-  margin: 0 auto 0;
+  margin: 0 auto;
 }
 .task__item {
   width: 56%;
@@ -131,7 +131,7 @@ button.btn_delete img:hover {
 }
 
 /* Completed */
-ul#completed_tasks label {
+ul#completed-task__list label {
   text-decoration: line-through;
   color: #888;
 }
@@ -141,11 +141,11 @@ ul li input[type=text] {
   display:none
 }
 
-ul li.edit_mode input[type=text] {
+ul li.task_edit-mode input[type=text] {
   display:inline-block;
   width:224px
 }
 
-ul li.edit_mode label {
+ul li.task_edit-mode label {
   display:none;
 }

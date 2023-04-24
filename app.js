@@ -10,8 +10,8 @@
 
 var taskInput = document.getElementById("new-task");//Add a new task.
 var addButton = document.getElementsByTagName("button")[0];//first button
-var incompleteTaskHolder = document.getElementById("incomplete_tasks");//ul of #incomplete_tasks
-var completedTasksHolder = document.getElementById("completed_tasks");//completed_tasks
+var incompleteTaskHolder = document.getElementById("todo-task__list");//ul of #todo-task__list
+var completedTasksHolder = document.getElementById("completed-task__list");//completed-task__list
 
 
 //New task list item
@@ -82,10 +82,10 @@ var editTask=function(){
   var editInput=listItem.querySelector('input[type=text]');
   var label=listItem.querySelector("label");
   var editBtn=listItem.querySelector(".btn_edit");
-  var containsClass=listItem.classList.contains("edit_mode");
-  //If class of the parent is .edit_mode
+  var containsClass=listItem.classList.contains("task_edit-mode");
+  //If class of the parent is .task_edit-mode
   if(containsClass){
-      //switch to .edit_mode
+      //switch to .task_edit-mode
       //label becomes the inputs value.
       label.innerText=editInput.value;
       editBtn.innerText="Edit";
@@ -93,8 +93,8 @@ var editTask=function(){
       editInput.value=label.innerText;
       editBtn.innerText="Save";
   }
-  //toggle .edit_mode on the parent.
-  listItem.classList.toggle("edit_mode");
+  //toggle .task_edit-mode on the parent.
+  listItem.classList.toggle("task_edit-mode");
 };
 
 
@@ -111,7 +111,7 @@ var deleteTask=function(){
 //Mark task completed
 var taskCompleted=function(){
   console.log("Complete Task...");
-  //Append the task list item to the #completed_tasks
+  //Append the task list item to the #completed-task__list
   var listItem=this.parentNode;
   completedTasksHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskIncomplete);
@@ -122,7 +122,7 @@ var taskIncomplete=function(){
   console.log("Incomplete Task...");
 //Mark task as incomplete.
   //When the checkbox is unchecked
-  //Append the task list item to the #incomplete_tasks.
+  //Append the task list item to the #todo-task__list.
   var listItem=this.parentNode;
   incompleteTaskHolder.appendChild(listItem);
   bindTaskEvents(listItem,taskCompleted);

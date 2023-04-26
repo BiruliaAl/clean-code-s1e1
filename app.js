@@ -114,7 +114,6 @@ var taskCompleted=function(){
   //Append the task list item to the #completed-task__list
   var listItem=this.parentNode;
   completedTasksHolder.appendChild(listItem);
-  listItem.classList.add("completed-task__label");
   bindTaskEvents(listItem, taskIncomplete);
 
 }
@@ -126,7 +125,6 @@ var taskIncomplete=function(){
   //Append the task list item to the #todo-task__list.
   var listItem=this.parentNode;
   incompleteTaskHolder.appendChild(listItem);
-  listItem.classList.remove("completed-task__label");
   bindTaskEvents(listItem,taskCompleted);
 }
 

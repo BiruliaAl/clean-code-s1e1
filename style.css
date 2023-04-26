@@ -22,9 +22,11 @@ body {
 } 
 
 @media (max-width:768px) {
+
 .eisenhower-matrix { 
   text-align: center;
 }
+
 }
 
 .container {
@@ -36,7 +38,7 @@ body {
 .task__item {
   width: 56%;
   display: inline-block;
-  flex-grow: 1
+  flex-grow: 1;
 }
 
 .add-task__wrapper {
@@ -137,7 +139,7 @@ li > label {
 }
 
 li > input[type="text"] {
-  width: 226px
+  width: 226px;
 }
 
 .btn_delete img {
@@ -160,12 +162,12 @@ ul#completed-task__list label {
 /* Edit Task */
 
 ul li input[type=text] {
-  display: none
+  display: none;
 }
 
 .task_edit-mode input[type=text] {
   display: inline-block;
-  width: 224px
+  width: 224px;
 }
 
 .task_edit-mode label {

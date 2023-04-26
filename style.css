@@ -46,18 +46,18 @@ body {
 }
 
 .task__list {
-  margin:0;
+  margin: 0;
   padding: 0px;
 }
 
 .task__items, 
 .task__subtittle {
-  list-style:none;
+  list-style: none;
 }
 
 input,
 button {
-  outline:none;
+  outline: none;
 }
 
 button {
